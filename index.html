@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <center>
+    <h1>Resume Builder</h1>
+    </center>
+    <form id="resume-form" onsubmit="event.preventDefault(); generatePDF();">
+      <div class="top-section">
+        <div class="left-section">
+          <label for="name">Name:</label>
+          <input type="text" id="name"><br><br>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email">
+        </div>
+
+        <div class="right-section">
+          <label for="photo">Profile Photo:</label>
+          <input type="file" id="photo">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>LinkedIn Profile:</label>
+        <textarea name="Linked In Profile" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Education:</label>
+        <textarea name="education" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Technical Skills:</label>
+        <textarea name="technical" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Projects:</label>
+        <textarea name="projects" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Internship:</label>
+        <textarea name="internship" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Certificates:</label>
+        <textarea name="certificate" required></textarea>
+      </div>
+      <button type="submit">Download PDF</button>
+    </form>
+  </div>
+
+  <div id="resume-output"></div>
+
+  <!-- Include html2pdf.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
